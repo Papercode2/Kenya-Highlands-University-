@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>success pages</title>
+</head>
+<body bgcolor="powderblue">
+    <style>
+        /* Reset some default styles for consistency */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply styles to the container */
+.container {
+    background-color: powderblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* You can choose an appropriate text color */
+}
+
+p {
+    font-size: 16px;
+    color: #666; /* You can choose an appropriate text color */
+}
+</style>
+    <div class="container">
+    <h1><center>Kenya Highlands University..</center></h1>
+    <script>
+    alert("submitted succesfully !!!")
+    </script>
+    <sessions>
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'admission' %}">Admission</a></li>
+            <li><a href="{% url 'login' %}">LOGIN AMIS</a></li>
+            <li><a href="{% url 'odel' %}">ODEL</a></li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+        </ul>
+    </nav>
+    </sessions>
+    <footer>
+        <p>&copy; 2023 Kenya Highlands University</p>
+      </footer>
+    
+</body>
+</html>

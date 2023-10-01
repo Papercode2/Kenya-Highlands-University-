@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMIS | Kenya Highlands University</title>
+</head>
+<body bgcolor="powderblue">
+    <style>
+        /* Reset some default styles for consistency */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply styles to the container */
+.container {
+    background-color: powderblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* You can choose an appropriate text color */
+}
+
+p {
+    font-size: 16px;
+    color: #666; /* You can choose an appropriate text color */
+}
+</style>
+    <div class="container">
+    <header>
+        <h1>AMIS - Academic Management Information System</h1>
+    <section>
+        <h2>Login to AMIS</h2>
+        <form method="post" action="">
+            {% csrf_token %}
+        <div>
+    Username:<input type ="username" name="username" placeholder="enter username" ><br>
+        </div>
+    Password:<input type ="password" name="password" placeholder="pasword...." class="form-control"><br>
+    <button type="submit">login</button><br>
+    <li><a href="{% url  'signup' %}">Signup</a></li>
+    <footer>
+        <p>&copy; 2023 kenya highlands university </p>
+        </footer>
+    </div>
+    </form>
+</div>
+{% for message in messages %}
+    <p id="messages">{{message}}</p>
+{% endfor %}
+    </section>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>index</title>
+  
+  <style>
+   
+ 
+  .contact-content {
+      background-color:cyan ;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: black;
+    }
+    p {
+      color: #666;
+    }
+    .contact-details {
+      text-align: left;
+    }
+  </style>
+</head>
+<body bgcolor="cyan">
+  <style>
+    /* Reset some default styles for consistency */
+body, h1, p {
+margin: 0;
+padding: 0;
+}
+
+/* Apply styles to the container */
+.container {
+background-color: powderblue;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+text-align: center;
+max-width: 600px;
+margin: 0 auto;
+}
+
+h1 {
+font-size: 24px;
+margin-bottom: 10px;
+color: #333; /* You can choose an appropriate text color */
+}
+
+p {
+font-size: 16px;
+color: #666; /* You can choose an appropriate text color */
+}
+</style>
+<div class="container">
+  <div class="contact-content">
+    <h1><center><b><marquee>WELCOME TO KENYA HIGHLANDS UNIVERSITY OFFICIAL PAGE.</marquee></b></center></h1>
+
+    <header>
+      <h1>Welcome to Kenya Highlands University Pages.</h1>
+      <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'admission' %}">Admission</a></li>
+            <li><a href="{% url  'login' %}">Login AMIS</a></li>
+            <li><a href="{% url 'odel' %}">ODEL</a></li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Welcome to Kenya Highlands University</h2>
+    <p>
+        The number one university around riftvalley.<br>
+        A christian university...........
+    </p>
+    <!-- Add images here if needed -->
+</section>
+
+<footer>
+  <p>&copy; 2023 Kenya Highlands University</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMIS | Kenya Highlands University</title>
+</head>
+<body bgcolor="powderblue">
+    <style>
+        /* Reset some default styles for consistency */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply styles to the container */
+.container {
+    background-color: powderblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* You can choose an appropriate text color */
+}
+
+p {
+    font-size: 16px;
+    color: #666; /* You can choose an appropriate text color */
+}
+</style>
+    <div class="container">
+    <header>
+        <h1>AMIS - Academic Management Information System</h1>
+    <section>
+        <h2>Login to AMIS</h2>
+        <form method="post" action="{% url 'dashboard' %}">
+            {% csrf_token %}
+        {{ form.username.label_tag }} {{ form.username }}
+        {{ form.password.label_tag }} {{ form.password }}
+        {% if form.errors %}
+            <p class="error">Please enter a correct username and password. Note that both fields may be case-sensitive.</p>
+        {% endif %}
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <input type="hidden" name="next" value="{% url 'dashboard' %}">
+            
+            <button type="submit">Login</button><br>
+             <button><a href="{% url 'signup' %}" class="btn">Signup</a></button>
+        </form>
+        
+    </section>
+    
+    <footer>
+        <p>&copy; 202
+</html>

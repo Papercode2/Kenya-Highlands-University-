@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amis Dashboard</title>
+</head>
+<body bgcolor="powderblue">
+    <style>
+        /* Reset some default styles for consistency */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply styles to the container */
+.container {
+    background-color: powderblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* You can choose an appropriate text color */
+}
+
+p {
+    font-size: 16px;
+    color: #666; 
+}
+</style>
+    <div class="container">
+    <center><h2>Welcome to Your Dashboard</h2></center>
+    Striving To Sucess is the University MOTTO<br>
+    <button class="toggle-button" onclick="toggleButtons()">Menu</button>
+    <div class="hidden-buttons">
+       
+    
+        <button><p><a href="{% url 'results' %}">Results</a></p></button><br>
+        <button><p><a href="{% url 'units' %}">Units</a></p></button><br>
+        <button><p><a href="{% url 'nominals' %}">Nominals</a></p></button><br>
+    
+        <button><p><a href="{% url 'logout' %}">Logout</a></p></button>
+    </div>
+
+    <script>
+        function toggleButtons() {
+            var hiddenButtons = document.querySelector('.hidden-buttons');
+            if (hiddenButtons.style.display === 'none') {
+                hiddenButtons.style.display = 'block';
+            } else {
+                hiddenButtons.style.display = 'none';
+            }
+        }
+    </script>    
+</body>
+</html>
